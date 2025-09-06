@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Linka Card{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-black via-gray-900 to-purple-900 text-white">
+
+    <!-- Navbar -->
+    <header class="w-full fixed top-0 left-0 z-50 bg-black/40 backdrop-blur-md shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+            <a href="{% url 'home' %}" class="text-xl font-bold text-yellow" >Linka Card</a>
+            <nav>
+                <ul class="flex space-x-6 text-white font-medium">
+                    <li><a href="{% url 'home' %}" class="hover:text-yellow-400 transition">Home</a></li>
+                    <li><a href="{% url 'contact' %}" class="hover:text-yellow-400 transition">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content con espacio para el navbar -->
+    <main class="pt-20">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 bg-black text-gray-300">
+        <p>© 2025 Linka Card. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1200,
+        once: true
+      });
+    </script>
+</body>
+</html>

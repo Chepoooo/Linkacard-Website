@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Linka Card{% endblock %}
+
+{% block content %}
+
+<!-- Hero principal -->
+<section class="hero text-center py-32 bg-transparent" data-aos="fade-up">
+    
+    
+    <div class="flex justify-center mb-8">
+        <img src="{% static 'images/logo.png' %}" 
+             alt="Linka Card Logo" 
+             class="w-72 h-auto animate-bounce">
+    </div>
+
+    
+    <h1 class="text-5xl font-extrabold mb-6 text-yellow-400">
+        Boost your business reviews with Linka Card 🚀
+    </h1>
+
+    
+    <p class="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+        Smart NFC cards for restaurants, shops, and local businesses in the USA.
+    </p>
+
+    
+    <a href="{% url 'contact' %}" 
+       class="px-8 py-4 bg-yellow-400 text-black font-semibold rounded-lg shadow-lg hover:bg-yellow-300 transition">
+       Get Started
+    </a>
+</section>
+
+<!-- About section -->
+<section class="about py-20 bg-black/40 text-white text-center" data-aos="fade-up">
+  <div class="container mx-auto px-6 lg:px-20">
+    <h2 class="text-4xl font-bold mb-6 text-yellow-400">Why Linka Card?</h2>
+    <p class="text-lg mb-12 max-w-2xl mx-auto text-gray-200">
+      Collecting reviews has never been easier. With our NFC cards, your customers can instantly leave feedback with just one tap.
+      Quick, simple, and effective to boost your reputation.
+    </p>
+
+    <!-- Beneficios -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      
+      <!-- Card 1 -->
+      <div class="p-6 bg-black/50 rounded-2xl shadow-lg hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="100">
+        <div class="text-4xl mb-4">⭐</div>
+        <h3 class="text-xl font-semibold mb-2 text-yellow-400">Instant Reviews</h3>
+        <p class="text-gray-200">Customers leave reviews on the spot, no complicated steps.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="p-6 bg-black/50 rounded-2xl shadow-lg hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="200">
+        <div class="text-4xl mb-4">📈</div>
+        <h3 class="text-xl font-semibold mb-2 text-yellow-400">Grow Reputation</h3>
+        <p class="text-gray-200">More reviews mean higher trust and better visibility online.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="p-6 bg-black/50 rounded-2xl shadow-lg hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="300">
+        <div class="text-4xl mb-4">⚡</div>
+        <h3 class="text-xl font-semibold mb-2 text-yellow-400">Fast & Simple</h3>
+        <p class="text-gray-200">Just one tap with NFC, and your business gets valuable feedback.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Imagen animada -->
+<section class="scroll-section py-20 bg-transparent">
+    <div class="container mx-auto flex justify-center px-4" data-aos="zoom-in">
+        <img src="{% static 'images/image1.png' %}" 
+             alt="Linka Card Preview" 
+             class="rounded-2xl shadow-2xl w-full max-w-4xl h-auto">
+    </div>
+</section>
+
+<!-- CTA Final -->
+<section class="cta py-28 bg-yellow-400 text-center" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-black mb-6">
+        Ready to grow your business with more reviews?
+    </h2>
+    <p class="text-lg text-black mb-10 max-w-2xl mx-auto">
+        Join hundreds of businesses already using Linka Card and start collecting reviews today.
+    </p>
+    <a href="{% url 'contact' %}" 
+       class="px-10 py-5 bg-black text-yellow-400 font-bold rounded-xl shadow-lg hover:bg-gray-900 transition text-lg">
+       Get Your Linka Card Now 🚀
+    </a>
+</section>
+
+{% endblock %}
