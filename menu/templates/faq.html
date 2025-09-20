@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Linka Card{% endblock %}
+
+{% block content %}
+<!-- FAQ Section -->
+<section class="bg-gray-900 py-20">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center text-white mb-12">❓ Frequently Asked Questions</h2>
+
+    <div class="space-y-4">
+
+      <!-- FAQ Item 1 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 text-left text-white font-semibold focus:outline-none faq-toggle">
+          <span>How does the Google Review Stand work?</span>
+          <span class="text-yellow-400 symbol">+</span>
+        </button>
+        <div class="faq-answer max-h-0 px-6 pb-0 text-gray-300 transition-[max-height] duration-500 ease-in-out">
+          <p class="py-4">
+            It’s simple! Customers tap their phone on the NFC stand, and it opens your Google review page instantly. No QR codes, no apps, no hassle.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 text-left text-white font-semibold focus:outline-none faq-toggle">
+          <span>Do I need a subscription or pay monthly fees?</span>
+          <span class="text-yellow-400 symbol">+</span>
+        </button>
+        <div class="faq-answer max-h-0 px-6 pb-0 text-gray-300 transition-[max-height] duration-500 ease-in-out">
+          <p class="py-4">
+            No! There are no monthly fees. It’s a one-time purchase, and you can use the stand unlimited times with your customers.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 text-left text-white font-semibold focus:outline-none faq-toggle">
+          <span>Does the stand need power or charging?</span>
+          <span class="text-yellow-400 symbol">+</span>
+        </button>
+        <div class="faq-answer max-h-0 px-6 pb-0 text-gray-300 transition-[max-height] duration-500 ease-in-out">
+          <p class="py-4">
+            Not at all. The stand uses NFC technology, which requires no batteries or electricity.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 text-left text-white font-semibold focus:outline-none faq-toggle">
+          <span>Will it work with all phones?</span>
+          <span class="text-yellow-400 symbol">+</span>
+        </button>
+        <div class="faq-answer max-h-0 px-6 pb-0 text-gray-300 transition-[max-height] duration-500 ease-in-out">
+          <p class="py-4">
+            Yes! All modern smartphones (iPhone and Android) support NFC. For older devices, we also include a QR code as backup.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 text-left text-white font-semibold focus:outline-none faq-toggle">
+          <span>Can I customize the Google Review Stand with my branding?</span>
+          <span class="text-yellow-400 symbol">+</span>
+        </button>
+        <div class="faq-answer max-h-0 px-6 pb-0 text-gray-300 transition-[max-height] duration-500 ease-in-out">
+          <p class="py-4">
+            Absolutely! We can print your logo, colors, and branding on the stand for a professional look that matches your business.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 text-left text-white font-semibold focus:outline-none faq-toggle">
+          <span>How long does shipping take?</span>
+          <span class="text-yellow-400 symbol">+</span>
+        </button>
+        <div class="faq-answer max-h-0 px-6 pb-0 text-gray-300 transition-[max-height] duration-500 ease-in-out">
+          <p class="py-4">
+            We ship with UPS Express. Delivery usually takes 2–3 business days within the U.S. and 5–7 days internationally.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 7 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 text-left text-white font-semibold focus:outline-none faq-toggle">
+          <span>What if I don’t know how to set it up?</span>
+          <span class="text-yellow-400 symbol">+</span>
+        </button>
+        <div class="faq-answer max-h-0 px-6 pb-0 text-gray-300 transition-[max-height] duration-500 ease-in-out">
+          <p class="py-4">
+            Don’t worry — setup takes less than 5 minutes, and we’ll guide you on a quick call if you need help.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 8 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 text-left text-white font-semibold focus:outline-none faq-toggle">
+          <span>What’s your refund policy?</span>
+          <span class="text-yellow-400 symbol">+</span>
+        </button>
+        <div class="faq-answer max-h-0 px-6 pb-0 text-gray-300 transition-[max-height] duration-500 ease-in-out">
+          <p class="py-4">
+            If you’re not satisfied, you can return your stand within 30 days for a full refund — no questions asked.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript: Toggle FAQ answers con animación -->
+<script>
+  document.querySelectorAll('.faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      const symbol = button.querySelector('.symbol');
+
+      if (answer.style.maxHeight && answer.style.maxHeight !== "0px") {
+        // Cerrar
+        answer.style.maxHeight = "0px";
+        answer.style.paddingBottom = "0px";
+        symbol.textContent = "+";
+      } else {
+        // Abrir
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        answer.style.paddingBottom = "1rem";
+        symbol.textContent = "−";
+      }
+    });
+  });
+</script>
+
+
+{% endblock %}
